@@ -61,7 +61,7 @@ int main()
     /* Declare variables for the user's score and number of guesses. */
 
     char cGuess;
-    int nScore;
+    int nScore = 0;
 
     /* make a nested for loop to ask the questions */
 
@@ -75,15 +75,15 @@ int main()
 
         /* Print the options using a for loop. */
 
-        for (int j = i * 4; j < (i * 4) + 4; j++)
+        for (int j = (i * 4); j < (i * 4) + 4; j++)
         {
             /* Print the options. */
-            printf("%s\n", sOptions[i]);
+            printf("%s\n", sOptions[j]);
         }
         /* Outside the inner for loop, we'll make a user input where the user can input their answers. */
         printf("Your answer: ");
-        /* Precede the format specifier with * symbol to clear the \n within out input buffer. */
-        scanf("* %c", &cGuess);
+        /* Put a space in between the format specifier with * symbol to clear the \n within out input buffer. */
+        scanf("%c", &cGuess);
 
         /* The user may input a lowercase letter, and that can cause errors. To fix this, use the toupper function. */
         cGuess = toupper(cGuess);
