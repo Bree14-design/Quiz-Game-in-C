@@ -10,27 +10,27 @@ int main()
     /* Specify the maximum size of each of these elements. 100 bytes is what I'll use. */
 
 
-    char sQuestions[][100] = {"Which country has the longest coastline in the world?",
+    char sQuestions[][500] = {"1. Which country has the longest coastline in the world?",
 
-                              "What is the world's most populated country?",
+                              "2. What is the world's most populated country?",
 
-                              "What is the capital of the Philippines?",
+                              "3. What is the capital of the Philippines?",
 
-                              "The Great Barrier Reef is off the coast of which country?",
+                              "4. The Great Barrier Reef is off the coast of which country?",
                               
-                              "What is the World's Smallest Country?",
+                              "5. What is the World's Smallest Country?",
                               
-                              "In which country is the world's highest waterfall?",
+                              "6. In which country is the world's highest waterfall?",
                               
-                              "What is the capital of Australia?",
+                              "7. What is the capital of Australia?",
                               
-                              "In which country is Mount Fuji located?",
+                              "8. In which country is Mount Fuji located?",
                               
-                              "In which country is the Cape of Good Hope?",
+                              "9. In which country is the Cape of Good Hope?",
                               
-                              "What country has the greatest number of active volcanoes?"};
+                              "10. What country has the greatest number of active volcanoes?"};
     
-    char sOptions[][100] = {"A. Russia","B. Canada","C. Indonesia", "D. Australia",
+    char sOptions[][500] = {"A. Russia","B. Canada","C. Indonesia", "D. Australia",
 
                             "A. China","B. India","C. USA", "D. Brazil",
 
@@ -52,7 +52,7 @@ int main()
     
     char sAnswers[] = {'B','A','C','A','D','A','B','B','C','A'};
 
-    /* Calculate the size of the array: 
+    /* Calculate the size of the questions: 
     
        To calculate, use the sizeof function and divide the size of your array to the size of an element in your array. */
 
@@ -70,7 +70,7 @@ int main()
         /* Print the question. */
         /* I'll print symbols to make it look good. This is optional, you can skip this. */
         printf("***************************\n");
-        printf("* %s\n", sQuestions[i]);
+        printf("%s\n", sQuestions[i]);
         printf("***************************\n");
 
         /* Print the options using a for loop. */
@@ -82,8 +82,8 @@ int main()
         }
         /* Outside the inner for loop, we'll make a user input where the user can input their answers. */
         printf("Your answer: ");
-        /* Put a space in between the format specifier to clear the \n within out input buffer. */
-        scanf("%c", &cGuess);
+        /* Precede the format specifier with a space to clear the \n within out input buffer. */
+        scanf(" %c", &cGuess);
 
         /* The user may input a lowercase letter, and that can cause errors. To fix this, use the toupper function. */
         cGuess = toupper(cGuess);
@@ -92,6 +92,8 @@ int main()
 
         if (cGuess == sAnswers[i])
         {
+            /* If the user's answer is correct, print "correct!". */
+            printf("Correct answer!\n");
             /* If the user's answer is correct, add 1 to their score. */
             nScore++;
         }
