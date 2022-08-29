@@ -10,7 +10,7 @@ int main()
     /* Specify the maximum size of each of these elements. 100 bytes is what I'll use. */
 
 
-    char sQuestions[][500] = {"1. Which country has the longest coastline in the world?",
+    char sQuestions[][100] = {"1. Which country has the longest coastline in the world?",
 
                               "2. What is the world's most populated country?",
 
@@ -30,7 +30,7 @@ int main()
                               
                               "10. What country has the greatest number of active volcanoes?"};
     
-    char sOptions[][500] = {"A. Russia","B. Canada","C. Indonesia", "D. Australia",
+    char sOptions[][100] = {"A. Russia","B. Canada","C. Indonesia", "D. Australia",
 
                             "A. China","B. India","C. USA", "D. Brazil",
 
