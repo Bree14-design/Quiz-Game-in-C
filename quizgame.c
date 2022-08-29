@@ -82,7 +82,7 @@ int main()
         }
         /* Outside the inner for loop, we'll make a user input where the user can input their answers. */
         printf("Your answer: ");
-        /* Put a space in between the format specifier with * symbol to clear the \n within out input buffer. */
+        /* Put a space in between the format specifier to clear the \n within out input buffer. */
         scanf("%c", &cGuess);
 
         /* The user may input a lowercase letter, and that can cause errors. To fix this, use the toupper function. */
